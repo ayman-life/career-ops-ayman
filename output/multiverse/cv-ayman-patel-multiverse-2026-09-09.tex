@@ -1,0 +1,140 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=0.52in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\definecolor{accent}{HTML}{4B1FA5}
+\definecolor{teal}{HTML}{157A86}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2pt}
+\setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=0.8pt, parsep=0pt, partopsep=0pt}
+\raggedbottom
+\sloppy
+
+\titleformat{\section}
+  {\large\bfseries\color{teal}\uppercase}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+\newcommand{\role}[4]{
+  \needspace{4\baselineskip}
+  \textbf{\color{accent}#1} \hfill {\small #2}\\[-1pt]
+  \textit{#3} \hfill {\small\textit{#4}}
+}
+
+\newcommand{\project}[2]{
+  \needspace{4\baselineskip}
+  \textbf{\color{accent}#1}\\[-1pt]
+  {\small #2}
+}
+
+\begin{document}
+\small
+
+\begin{center}
+  {\LARGE\textbf{Ayman Patel}}\\
+  \vspace{2pt}
+  London, UK \quad | \quad
+  \href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \quad | \quad
+  +44 7900 626876 \quad | \quad
+  \href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel}\\
+  \href{https://github.com/aymanapatel}{github.com/aymanapatel} \quad | \quad
+  \href{https://patelofthought.com/me}{patelofthought.com/me}
+\end{center}
+
+\section{Summary}
+Senior full-stack and AI engineer with 6+ years of production experience at Mastercard, followed by the Nebius AI Engineering Fellowship. I build working systems end to end: React and TypeScript interfaces, Spring or FastAPI backend services, PostgreSQL and Redis data layers, context and retrieval pipelines, Kafka data pipelines, agent tool integrations, evaluation checks, and Kubernetes delivery. At Nebius, I built 12+ AI systems covering LangGraph agents, MCP, deterministic agent handoffs, distributed training, and LLM inference on Nvidia H100s. \textbf{My KV-cache implementation cut generation time from 0.943s to 0.141s for 128 tokens, a 6.69x speedup.} I use AI-assisted development to test ideas quickly, inspect the result, and turn the useful ones into software people can trust.
+
+\section{Experience}
+\role{Nebius Academy}{March 2026 to May 2026}{AI Engineering Fellow}{London, UK}
+\begin{itemize}
+  \item Built \textbf{12+ working AI systems} on Nvidia H100 infrastructure across agent workflows, LLM architectures, distributed training, MLOps, and inference performance.
+  \item Built a LangGraph ReAct research agent that planned its own tool use. Added an automated agent-evaluation check that compared every figure in the final response with the tool log, so \textbf{fabricated outputs were caught before reaching the user}.
+  \item Designed an MCP shared tool layer for LangGraph, Rasa, and voice clients. Registered tools once and exposed them through a common contract; \textbf{a venue status change reached every client without code changes}.
+  \item Joined an exploratory LangGraph agent to a deterministic Rasa Pro CALM flow using atomic file IPC. The agents passed state safely, rejected invalid choices, and re-ran research \textbf{without human intervention or race conditions}.
+  \item Built a voice pipeline across speech-to-text, agent reasoning, and text-to-speech. Added error handling, text-mode fallback, and a visible warning when Speechmatics was unavailable, so \textbf{the system kept working when an external service failed}.
+  \item Built automated checks around agent outputs and deterministic Python rules for deposit caps, party sizes, and booking cut-offs, producing \textbf{traceable decisions for commercial transactions}.
+  \item Implemented KV caching and preallocated sequence buffers for autoregressive inference, reducing 128-token generation time from 0.943s to 0.141s, a \textbf{6.69x speedup}.
+  \item Deployed distributed PyTorch training across 2 Nvidia H100 Kubernetes nodes with Docker, SkyPilot, \texttt{torchrun}, NCCL, and environment-driven YAML configuration. \textbf{Local and cloud runs used the same version-controlled setup.}
+  \item Built a transformer language model, LoRA for GPT-2, a Mixture of Experts model, and RoPE from scratch. LoRA trained about 811K adapter parameters, \textbf{0.65\% of GPT-2's 124M parameters}, and produced a 3 MB adapter instead of a 500 MB checkpoint.
+\end{itemize}
+
+\role{Mastercard}{March 2024 to August 2025}{Senior Software Engineer}{Vadodara, India}
+\begin{itemize}
+  \item Owned delivery across React and TypeScript frontends, Spring APIs, PostgreSQL JSONB, Redis, Kafka, observability, and Jenkins CI/CD. Took work from PM requirements and Figma flows through backend contracts, data storage, testing, deployment, and incident response.
+  \item Drove a Webpack Module Federation platform that split a monolithic React application into independent product modules. \textbf{10+ teams shipped on separate release cadences, cutting deployment coordination from days to hours.}
+  \item Built the host shell with React, TypeScript, Redux Toolkit, and RTK Query. Defined runtime module discovery, shared dependency boundaries, and version contracts so teams could release independently without breaking the combined product.
+  \item Developed backend APIs with Spring, Spring Data JPA, and Hibernate. Applied API Gateway and Kafka event-sourcing patterns to create asynchronous, auditable flows.
+  \item Used PostgreSQL JSONB for dynamic forms, so business teams could add fields \textbf{without database migrations}.
+  \item Added Resilience4j circuit breakers and retries across 5+ microservices, reducing cascading downstream failures and \textbf{improving system availability by 15\%}.
+  \item Added Redis caching for common API data, moved static assets to Akamai CDN, and instrumented the frontend with Grafana and OpenTelemetry. \textbf{UI load performance improved by 30\%.}
+  \item Used k6 and InfluxDB to track latency across releases, then used Splunk, Grafana, and Dynatrace during incidents. \textbf{Mean time to resolution fell from days to hours.}
+  \item Led Mastercard's accessibility work, raising WCAG compliance scores by \textbf{40\%}. Mentored engineers across 10+ teams and contributed 5 fixes and additions to the internal design system.
+  \item Led cross-country projects as the de facto frontend and backend architect, UX designer, and product manager. Turned requirements into technical specifications, user stories, and acceptance criteria, then drove delivery across engineering teams.
+\end{itemize}
+
+\needspace{12\baselineskip}
+\role{Mastercard}{March 2022 to February 2024}{Software Engineer II}{Vadodara, India}
+\begin{itemize}
+  \item Built greenfield React and TypeScript applications with Redux and RTK Query, backed by Spring, Hibernate, and Oracle services.
+  \item Built Gradle pipelines for dependency management and artifact generation, supporting repeatable application builds.
+  \item Wrote unit, component, and browser tests with Jest, React Testing Library, Playwright, and Cypress. Reached \textbf{95\% test coverage} and cut the end-to-end CI suite from \textbf{8 hours to 3 hours} through splitting, parallel execution, selective retries, and environment caching.
+  \item Designed a high-fidelity Figma prototype in 2 days when the project had no UX designer, giving product managers and stakeholders a working flow to review before implementation.
+\end{itemize}
+
+\role{Mastercard}{July 2019 to February 2022}{Software Engineer I}{Vadodara, India}
+\begin{itemize}
+  \item Built REST APIs and automated enterprise workflows with Camunda, BPMN, DMN, and CMMN.
+  \item Developed an HSM integration for MDES tokenisation, securing card data across payment flows. Reviewed penetration-test findings and shipped risk-ranked fixes.
+  \item Built a Jenkins CI/CD pipeline for an AngularJS application using Grunt.
+\end{itemize}
+
+\role{Mastercard}{January 2019 to June 2019}{Software Engineering Intern}{Vadodara, India}
+\begin{itemize}
+  \item Built a Spring WebFlux image-serving service for MDES CardArt. Used ImageMagick compression and Reactive Streams to reduce payload size and support non-blocking delivery, with behaviour defined through test-driven development.
+\end{itemize}
+
+\section{Education}
+\textbf{\color{accent}Queen Mary University of London} \hfill September 2025 to September 2026\\[-1pt]
+MSc Advanced Computer Science
+
+\vspace{2pt}
+\textbf{\color{accent}Sardar Vallabhbhai Institute of Technology} \hfill July 2015 to May 2019\\[-1pt]
+Bachelor of Computer Science, GPA: 7.9/10
+
+\section{Projects}
+\project{\href{https://github.com/aymanapatel/rl-a11y}{Web Accessibility Repair Platform}}{Architected an end-to-end platform with a React interface, FastAPI services, LLM-guided Browser Use, Playwright, and graph models. Collected aligned HTML, axe-core, accessibility-tree, visual, and screenshot data for \textbf{704 webpages}. Trained routed GAT and GraphSAGE specialists and generated schema-constrained repairs, improving \textbf{page-level F1 by 34.1 points} and \textbf{rule-level F1 by 30.6 points} over the first architecture.}
+
+\vspace{2pt}
+\project{\href{https://github.com/aymanapatel/nebius-project}{Repository Summarizer}}{Built a FastAPI and LLM service that turns GitHub repositories into readable summaries. Parsed code with AST and Tree-sitter, ranked source files, and assembled context within a \textbf{7,000-token limit}. The project secured admission to the Nebius AI Engineering Fellowship.}
+
+\vspace{2pt}
+\project{\href{https://github.com/aymanapatel/golang-microservices}{Go Microservices}}{Built REST and gRPC services with request validation, Swagger/OpenAPI documentation, Envoy load balancing, Kubernetes, and WASM filters.}
+
+\section{Hackathon}
+\begin{itemize}
+  \item \textbf{\{Tech: Europe\} Hackathon, London | Most Secure Build Award | June 2026:} Built a research product that turns academic papers into investor-ready biotech intelligence. An AI research agent expanded plain-English queries, searched PubMed and OpenAlex through Tavily, and returned a scorecard covering the drug target, disease, mechanism, and commercial viability. Sent the corresponding author to Attio CRM as a lead and added one-click R\&D briefs plus a voice agent. Aikido Security found \textbf{zero issues in the codebase}, earning the team a EUR 1,000 prize.
+  \item \textbf{AI Hackathon, Vadodara | 3rd place | March 2025.}
+  \item \textbf{AI Hackathon, Vadodara | 2nd place | September 2024:} Built a RAG retrieval pipeline for internal documentation with LangChain and Chroma. Chunked and embedded documents, then returned grounded answers with source references.
+  \item \textbf{Encode Hackathon, London | 3rd place | 2025:} Built Phantom Fraud, an AI financial-risk engine for Solana. Used Solana CLI, OpenRouter, and Helius APIs to inspect on-chain activity and flag wash-trading patterns through circular wallet flows, buyer concentration, and repeated token swaps.
+\end{itemize}
+
+\section{Blog}
+\begin{itemize}
+  \item \textbf{\href{https://patelofthought.com/blog}{Patel of Thought}:} Published 40+ technical articles on AI and LLM systems, observability, system design, and distributed data infrastructure. Industry newsletters have featured the work, including eBPF.
+  \item Wrote company-wide whitepapers on accessibility and microfrontend architecture. They earned CTO recognition, became internal frontend engineering references, and were circulated to \textbf{200 engineers}.
+\end{itemize}
+
+\end{document}

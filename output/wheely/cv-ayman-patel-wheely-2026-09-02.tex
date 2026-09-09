@@ -1,0 +1,135 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=0.58in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\definecolor{accent}{HTML}{4B1FA5}
+\definecolor{teal}{HTML}{157A86}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=1.2pt, parsep=0pt, partopsep=0pt}
+\raggedbottom
+\sloppy
+
+\titleformat{\section}
+  {\large\bfseries\color{teal}\uppercase}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+\newcommand{\role}[4]{
+  \needspace{5\baselineskip}
+  \textbf{\color{accent}#1} \hfill {\small #2}\\
+  \textit{#3} \hfill {\small \textit{#4}}
+}
+
+\newcommand{\entry}[2]{
+  \textbf{\color{accent}#1}\\[-1pt]
+  {\small #2}
+}
+
+\newcommand{\education}[3]{
+  \textbf{\color{accent}#1} \hfill {\small #2}\\[-1pt]
+  {\small #3}\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Ayman Patel}}\\
+  \vspace{2pt}
+  London, UK \quad | \quad
+  \href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \quad | \quad
+  \href{https://linkedin.com/in/aymanapatel}{linkedin.com/in/aymanapatel}\\
+  \href{https://github.com/aymanapatel}{github.com/aymanapatel} \quad | \quad
+  \href{https://patelofthought.com/me}{patelofthought.com/me} \quad | \quad
+  \href{https://patelofthought.com/blog}{patelofthought.com/blog}
+\end{center}
+
+\section{Summary}
+{\small
+Full-Stack Engineer with 6+ years at Mastercard, targeting privacy-first product engineering with a frontend focus across React, TypeScript/JavaScript, Redux Toolkit, RTK Query, Vite and Webpack. I designed a microfrontend platform that let 10+ teams deploy independently, cut UI load time by 30\%, and built security-sensitive payment services backed by Java, Spring, PostgreSQL, Redis and Kafka. I take work from product requirements and Figma through implementation, automated testing, CI/CD, observability and production support. Backend experience includes Node.js, NestJS, Go, gRPC, REST APIs, MongoDB, RabbitMQ, AWS, Terraform and Kubernetes.
+}
+
+\section{Education}
+\education{Queen Mary University of London}{September 2025 - September 2026}{MSc Advanced Computer Science}
+\vspace{2pt}
+\education{Sardar Vallabhbhai Institute of Technology}{July 2015 - May 2019}{Bachelor of Computer Science, GPA: 7.9/10}
+
+\section{Experience}
+\role{Mastercard}{March 2024 - August 2025}{Senior Software Engineer}{Vadodara, India}
+\begin{itemize}
+  \item Designed and rolled out a microfrontend platform with Webpack Module Federation, splitting a monolithic React frontend into independently deployable modules. It enabled \textbf{10+ product teams to ship on separate release cadences} and cut deployment coordination \textbf{from days to hours}.
+  \item Built the host shell with React, TypeScript, Redux Toolkit and RTK Query. Defined shared dependency boundaries, runtime module discovery and versioning contracts so teams could upgrade libraries without breaking the combined product.
+  \item Built \textbf{customer onboarding features with NestJS and Node.js} at Mastercard.
+  \item Led the accessibility initiative across React and TypeScript products, lifting WCAG compliance by \textbf{40\%}, coaching \textbf{10+ engineering teams} on semantic markup, focus management and ARIA patterns, and contributing 5 fixes to Mastercard's internal design system.
+  \item Cut UI load time by \textbf{30\%} through Akamai CDN migration and bundle delivery work. Added client-side traces and Core Web Vitals with Grafana and OpenTelemetry so regressions were visible before production.
+  \item Built Spring, Spring Data JPA and Hibernate APIs with PostgreSQL JSONB, Redis and Kafka. Added circuit breaker and retry patterns across 5+ microservices, improving system availability by \textbf{15\%}.
+\end{itemize}
+
+\role{Mastercard}{March 2022 - February 2024}{Software Engineer II}{Vadodara, India}
+\begin{itemize}
+  \item Built greenfield React and TypeScript applications with Redux and RTK Query, plus Java and Spring backend services with Oracle and Hibernate.
+  \item Wrote UI and component tests with Jest and React Testing Library, added \textbf{snapshot tests for Storybook components}, and covered end-to-end flows with Playwright and Cypress. Reached \textbf{95\% test coverage} and cut the CI end-to-end suite \textbf{from 8 hours to 3 hours} through splitting, parallel execution, selective retries and environment caching.
+  \item Produced high-fidelity Figma prototypes with product managers and stakeholders, setting the UX direction in \textbf{2 days} when no UX designer was available.
+\end{itemize}
+
+\role{Mastercard}{July 2019 - February 2022}{Software Engineer I}{Vadodara, India}
+\begin{itemize}
+  \item Designed REST APIs for Camunda workflows and maintained a Hardware Security Module integration for MDES tokenisation, \textbf{securing card data transmission across mobile payment flows}.
+  \item Reviewed penetration-test findings, prioritised fixes by risk and shipped remediation to keep enterprise applications compliant.
+\end{itemize}
+
+\role{Mastercard}{January 2019 - June 2019}{Software Engineering Intern}{Vadodara, India}
+\begin{itemize}
+  \item Built a non-blocking Spring WebFlux image service with Reactive Streams and ImageMagick compression, using TDD to protect behaviour and support safe refactoring.
+\end{itemize}
+
+\needspace{14\baselineskip}
+\section{Hackathon}
+\begin{itemize}
+  \item \textbf{\{Tech: Europe\} Hackathon, London, 2026 | Most Secure Build Award (EUR 1,000):} Built a deep-science research product that turned academic papers into investor-ready intelligence. Aikido Security found \textbf{zero issues in the codebase}. Partners included Attio, Tavily and Google DeepMind.
+  \item \textbf{Technology Hackathon, 2023 | 2nd place:} Migrated a React application to Next.js, improving page load performance and adding server-side rendering and static generation for key routes.
+  \item \textbf{Encode Hackathon, London, 2025 | 3rd place:} Built Phantom Fraud, a Solana risk engine that parsed on-chain transactions and detected wash-trading patterns through circular wallet flows and buyer-diversity heuristics.
+\end{itemize}
+
+\needspace{9\baselineskip}
+\section{Blog}
+\begin{itemize}
+  \item \textbf{\href{https://patelofthought.com/blog}{Patel of Thought} | 40+ technical articles:} I write about production tradeoffs across frontend architecture, observability, distributed data infrastructure and AI/LLM systems. The work has appeared in industry newsletters, including eBPF.
+  \item \textbf{\href{https://aymanace2049.hashnode.dev/snapshot-testing}{Snapshot testing:}} Published a practical guide to snapshot testing for frontend components.
+  \item \textbf{Frontend engineering whitepapers:} Wrote company-wide papers on accessibility and microfrontend architecture. They earned CTO recognition, became internal engineering references and reached \textbf{200 engineers}.
+\end{itemize}
+
+\needspace{10\baselineskip}
+\section{Projects}
+\entry{\href{https://github.com/aymanapatel/rl-a11y}{Web Accessibility Repair Platform} | React, FastAPI, Playwright, axe-core}{Built an end-to-end platform that collected HTML, accessibility-tree, visual and screenshot data from 704 public and authenticated webpages, then generated schema-constrained repairs through FastAPI and React. Improved page-level F1 by \textbf{34.1 points} and rule-level F1 by \textbf{30.6 points}.}
+
+\vspace{2pt}
+\entry{\href{https://github.com/aymanapatel/snapshot-testing}{Snapshot Testing} | Storybook, component testing}{Built snapshot tests for Storybook components and wrote a companion guide explaining how stored component output catches unexpected UI changes.}
+
+\vspace{2pt}
+\entry{\href{https://github.com/aymanapatel/golang-microservices}{Go Microservices} | Go, REST, gRPC, Kubernetes}{Built a production-oriented Go microservices platform with REST and gRPC endpoints, Gorilla Mux request validation, Swagger/OpenAPI contracts, Envoy service mesh and load balancing, plus Kubernetes/WASM filters.}
+
+\needspace{8\baselineskip}
+\section{Fellowship}
+\role{Nebius Academy}{March 2026 - May 2026}{AI Engineering Fellow}{London, UK}
+\begin{itemize}
+  \item \textbf{LLM architectures:} Learned how pre-norm, causal attention, LoRA, MoE, RoPE and KV caches shape transformer training and inference. Built a transformer from scratch and LoRA for GPT-2, training 811K of 124M parameters.
+  \item \textbf{AI agents:} Learned where exploratory agents need deterministic rules and traceable tool calls. Built a LangGraph ReAct agent, Rasa CALM booking flow and shared MCP tool layer.
+  \item \textbf{MLOps and distributed training:} Learned to debug distributed jobs across model code, containers and NCCL networking. Built a version-controlled DDP pipeline across 2 Nvidia H100 Kubernetes nodes with Docker, SkyPilot and torchrun.
+  \item \textbf{GPU performance:} Learned to use profiles and roofline analysis to find memory-bound kernels. Built KV caching and preallocated buffers, cutting 128-token inference \textbf{from 0.943s to 0.141s}.
+\end{itemize}
+
+\end{document}
