@@ -8,7 +8,7 @@ business_area: Engineering and CTO
 ref: "10052703"
 job_id: "20909"
 url: https://bloomberg.avature.net/careers/JobDetail/Senior-Software-Engineer-Full-Stack-Cross-Asset-Trading-Systems/20909
-poc:
+poc: Raynard Dodzi Helegah
 ---
 
 # Senior Software Engineer - Full-Stack / Cross-Asset Trading Systems
