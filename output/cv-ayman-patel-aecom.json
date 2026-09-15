@@ -1,0 +1,141 @@
+{
+  "lang": "en",
+  "page_format": "a4",
+  "candidate": {
+    "name": "Ayman Patel",
+    "phone": "+44 7900 626876",
+    "email": "ayman.patel97@gmail.com",
+    "linkedin": { "url": "https://linkedin.com/in/aymanapatel", "display": "linkedin.com/in/aymanapatel" },
+    "github": { "url": "https://github.com/aymanapatel", "display": "github.com/aymanapatel" },
+    "portfolio": { "url": "https://patelofthought.com/me", "display": "patelofthought.com/me" },
+    "location": "London, UK"
+  },
+  "sections": {
+    "summary": "Professional Summary",
+    "competencies": "Core Competencies",
+    "experience": "Work Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "certifications": "Writing",
+    "awards": "Hackathons",
+    "skills": "Skills"
+  },
+  "summary": "Senior frontend engineer with six years at Mastercard building React and TypeScript products, from independently deployed microfrontends to accessible design-system components. Improved UI load performance by 30% and WCAG compliance scores by 40%. Owns component architecture, state management, browser performance and API integration, with Python and AI engineering experience through FastAPI projects and the Nebius fellowship.",
+  "competencies": [
+    "React and TypeScript",
+    "Frontend architecture",
+    "Microfrontends",
+    "Accessibility and WCAG",
+    "Browser APIs",
+    "Performance and observability",
+    "REST and GraphQL",
+    "Automated testing"
+  ],
+  "experience": [
+    {
+      "company": "Nebius Academy",
+      "role": "AI Engineering Fellow",
+      "location": "London, UK",
+      "dates": "Mar 2026 - May 2026",
+      "bullets": [
+        "The UK programme covers **five modules**: AI agents, LLM architectures, MLOps, performance engineering and LLM post-training. Completed hands-on work across the first four modules, learning how to evaluate, deploy and monitor AI systems.",
+        "Built a **Python** research agent that checks figures in its answers against tool results, and a booking flow that applies business rules before confirming a request.",
+        "Built a small language model and improved its response time with **KV caching**; packaged training jobs for repeatable cloud runs."
+      ]
+    },
+    {
+      "company": "Mastercard",
+      "role": "Senior Software Engineer",
+      "location": "Vadodara, India",
+      "dates": "Mar 2024 - Aug 2025",
+      "bullets": [
+        "Designed a **React and TypeScript** microfrontend platform with **Webpack Module Federation**, enabling **10+ product teams** to deploy modules independently and reducing release coordination from days to hours.",
+        "Built the host shell with **Redux Toolkit and RTK Query**; defined shared-dependency, routing and versioning contracts so independently shipped modules worked together.",
+        "Led accessibility work across React components and the internal design system, lifting **WCAG compliance scores by 40%**; coached **10+ teams** on semantic markup, focus management and ARIA.",
+        "Improved UI load performance by **30%** through **Akamai CDN** migration and bundle-delivery optimisation; instrumented client-side traces and core web vitals with Grafana and OpenTelemetry.",
+        "Translated product requirements into technical specifications, Figma prototypes and release-ready features while collaborating across frontend, backend and UX responsibilities.",
+        "Developed **Spring APIs** and flexible **PostgreSQL JSONB** forms behind the frontend, giving business teams new form fields without database migrations."
+      ]
+    },
+    {
+      "company": "Mastercard",
+      "role": "Software Engineer II",
+      "location": "Vadodara, India",
+      "dates": "Mar 2022 - Feb 2024",
+      "bullets": [
+        "Built greenfield **React and TypeScript** applications with Redux and RTK Query, alongside Spring and Oracle services.",
+        "Migrated application routing from **React Router v5 to v6**, updating route definitions and navigation behaviour across the frontend.",
+        "Used **Fetch and AbortController** to cancel search requests when a new search superseded them or a component unmounted.",
+        "Moved non-DOM work, including observability/APM and date-library processing, into **Web Workers** to keep the main thread available for UI interaction.",
+        "Built a widget using the **CustomEvent API** to pass messages between the application and an external Drupal site.",
+        "Wrote Jest and React Testing Library unit tests and Playwright/Cypress end-to-end tests, achieving **95% test coverage**; split and parallelised the CI suite, cutting runtime from **eight hours to three**.",
+        "Designed high-fidelity **Figma** prototypes for product managers in **two days** when no UX designer was available."
+      ]
+    },
+    {
+      "company": "Mastercard",
+      "role": "Software Engineer I",
+      "location": "Vadodara, India",
+      "dates": "Jul 2019 - Feb 2022",
+      "bullets": [
+        "Built **REST APIs** for Camunda workflow automation and delivered an **Angular.js** application through Grunt and Jenkins.",
+        "Developed an HSM integration for MDES tokenisation and remediated security findings from penetration tests."
+      ]
+    },
+    {
+      "company": "Mastercard",
+      "role": "Software Engineering Intern",
+      "location": "Vadodara, India",
+      "dates": "Jan 2019 - Jun 2019",
+      "bullets": [
+        "Built a **Spring WebFlux** image-serving service for MDES CardArt, using ImageMagick compression and test-driven development."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Web Accessibility Repair Platform",
+      "url": "https://github.com/aymanapatel/rl-a11y",
+      "tech": "React, FastAPI, Playwright, axe-core",
+      "description": "Architected an end-to-end web-accessibility platform using LLM-guided Browser Use and Playwright to navigate public/authenticated pages and collect aligned HTML, axe-core, accessibility-tree, visual and screenshot data for 704 webpages; trained routed GAT/GraphSAGE specialists and generated schema-constrained repairs through FastAPI/React, improving page-level F1 by 34.1 points and rule-level F1 by 30.6 points over the initial architecture."
+    },
+    {
+      "name": "Nebius Project",
+      "url": "https://github.com/aymanapatel/nebius-project",
+      "tech": "Python, FastAPI, LLMs, Tree-sitter",
+      "description": "Built a Repository Summarizer service using FastAPI and LLMs that generates human-readable summaries of GitHub repositories. Extracts code skeletons via AST and Tree-sitter to fit within token budgets, intelligently prioritizes source files, and assembles context within a 7000-token limit. This project secured admission into the Nebius AI Engineering Fellowship"
+    },
+    {
+      "name": "Go Microservices",
+      "url": "https://github.com/aymanapatel/golang-microservices",
+      "description": "Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC"
+    },
+    {
+      "name": "Java CLI using GraalVM",
+      "url": "https://github.com/aymanapatel/java-cli",
+      "description": "Built a Java CLI tool using the Picocli framework to query the Stack Overflow API, then compiled it to a native binary with GraalVM for zero-JVM-startup execution"
+    }
+  ],
+  "education": [
+    { "title": "MSc Advanced Computer Science", "org": "Queen Mary University of London", "year": "2025 - 2026" },
+    { "title": "Bachelor of Computer Science", "org": "Sardar Vallabhbhai Institute of Technology", "year": "2015 - 2019" }
+  ],
+  "certifications": [
+    { "title": "Patel of Thought blog", "org": "patelofthought.com/blog - 40+ published articles, including frontend engineering and system design" },
+    { "title": "Frontend engineering whitepapers", "org": "Accessibility and microfrontend architecture; recognised by the Mastercard CTO, circulated to 200 engineers and adopted as internal references" }
+  ],
+  "awards": [
+    { "title": "{Tech: Europe} Hackathon | London, UK | Most Secure Build Award (€1,000 cash)", "org": "Built a platform bridging deep science and venture capital/biotech by turning raw academic papers into investor-ready intelligence. Users search in plain English (e.g., \"Ozempic in a pill\"); an AI research agent expands the query into scientific keywords, searches PubMed/OpenAlex via Tavily, and returns an instant scorecard with drug target, disease, mechanism, and Commercial Viability score. Saved the corresponding author as a lead in Attio CRM; one-click R&D brief generation and a voice agent for hands-free review. Recognized by Aikido Security for the most secure codebase with zero issues detected, despite last-minute demo crunch in an npm ecosystem. Partners: Attio, Tavily, Google DeepMind.", "year": "Jun 2026" },
+    { "title": "Encode Hackathon | London, UK | 3rd place", "org": "Built Phantom Fraud, an AI-powered financial risk engine for the Solana blockchain. Used Solana CLI, OpenRouter, and Helius APIs to fetch and parse on-chain transactions and detect wash-trading patterns. Designed heuristics for circular wallet flows, buyer-diversity concentration, and repeated token swaps to flag inorganic volume.", "year": "2025" },
+    { "title": "AI Hackathon | Vadodara, India | 3rd place", "year": "Mar 2025" },
+    { "title": "AI Hackathon | Vadodara, India | 2nd place", "org": "Developed a RAG-based internal documentation search system using LangChain and Chroma vector database. Chunked internal docs, embedded them, and exposed a Q&A interface that retrieved grounded answers with source references.", "year": "Sep 2024" },
+    { "title": "Technology Hackathon | Vadodara, India | 2nd place", "org": "Migrated a React application to Next.js, improving page load performance and enabling server-side rendering and static generation for key routes.", "year": "2023" }
+  ],
+  "skills": [
+    { "category": "Frontend", "items": "React, TypeScript, JavaScript, HTML, Redux Toolkit, RTK Query, Next.js, Vite, Webpack, Module Federation, Figma" },
+    { "category": "Browser APIs", "items": "Fetch, AbortController, Web Workers, CustomEvent" },
+    { "category": "Backend and data", "items": "Python, GraphQL, REST APIs, FastAPI, Spring, PostgreSQL, Redis, Kafka" },
+    { "category": "Testing and quality", "items": "Jest, React Testing Library, Playwright, Cypress, axe-core, WCAG" },
+    { "category": "Observability", "items": "Grafana, OpenTelemetry, Dynatrace, Splunk" }
+  ]
+}

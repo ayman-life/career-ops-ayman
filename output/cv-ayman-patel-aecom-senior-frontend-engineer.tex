@@ -1,0 +1,169 @@
+% AECOM Senior Frontend Engineer CV for Ayman Patel.
+% Content: cv.md, config/profile.yml, and details stated by the user in this conversation.
+% Visual reference: output/ktp-scotland-jw/jw-grant-ktp-resume.pdf (style only).
+% Compile with: pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error <file>.tex
+\documentclass[letterpaper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[letterpaper,left=0.46in,right=0.46in,top=0.31in,bottom=0.34in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage[colorlinks=true,urlcolor=linkteal]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\definecolor{linkteal}{RGB}{43,106,108}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\raggedbottom
+\urlstyle{same}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{2pt}
+
+\newcommand{\resumeRole}[4]{%
+  \noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textbf{#2}\\[1pt]
+    \textbf{#3} & \textit{#4}\\[3pt]
+  \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeEducation}[4]{%
+  \noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textbf{#2}\\[-1pt]
+    \textit{#3} & \textit{#4}
+  \end{tabular*}\vspace{-2pt}
+}
+\newcommand{\resumeProject}[3]{%
+  \noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{\href{#2}{#1}} & \textbf{\small #3}
+  \end{tabular*}\vspace{-2pt}
+}
+\newcommand{\resumeHackathon}[3]{%
+  \noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \textbf{#2}\\[-1pt]
+    \textit{#3} &
+  \end{tabular*}\vspace{-2pt}
+}
+\newenvironment{resumeBullets}{%
+  \begin{itemize}[leftmargin=0.19in,label=\textbullet,itemsep=0.2pt,topsep=0.8pt,parsep=0pt,partopsep=0pt]
+}{%
+  \end{itemize}\vspace{1pt}
+}
+\newcommand{\resumeContext}[1]{\noindent\textit{#1}\par\vspace{1pt}}
+
+\begin{document}
+\begin{center}
+  {\Huge\scshape Ayman Patel}\\[1pt]
+  \small London, UK \;|\; \href{mailto:ayman.patel97@gmail.com}{ayman.patel97@gmail.com} \;|\; +44 7900 626876\\[-1pt]
+  \small \href{https://linkedin.com/in/aymanapatel}{\faLinkedin\ linkedin.com/in/aymanapatel}
+  \quad \href{https://github.com/aymanapatel}{\faGithub\ github.com/aymanapatel}
+  \quad \href{https://patelofthought.com/me}{\faGlobe\ patelofthought.com/me}
+\end{center}
+\vspace{-10pt}
+
+\section{Professional Summary}
+Senior full-stack (frontend leaning) engineer with six years at Mastercard building React and TypeScript products, from independently deployed microfrontends to accessible design-system components. Also build backend platforms that are reliable, Devops pipelines that are repeatable and automation testing that is holistic and scalable. Technical \href{https://aymanace2049.hashnode.dev}{blogger} covering topics in all layers of the software engineering stack.
+Masters in Advanced Computer Science at Queen Mary University of London and an AI fellowship at Nebius Academy.
+
+\section{Education}
+\resumeEducation{Queen Mary University of London}{London, UK}{MSc Advanced Computer Science}{Sep 2025 -- Sep 2026}
+\resumeEducation{Sardar Vallabhbhai Institute of Technology}{Surat, India}{Bachelor of Computer Science}{Jul 2015 -- May 2019}
+
+\section{Work Experience}
+
+
+\resumeRole{Mastercard}{Mar 2024 -- Aug 2025}{Senior Software Engineer}{Vadodara, India}
+\resumeContext{Worked on Mastercard's customer onboarding platform, building its React and TypeScript frontends and supporting APIs.}
+\begin{resumeBullets}
+  \item Designed a \textbf{React and TypeScript} microfrontend platform with \textbf{Webpack Module Federation}, enabling \textbf{10+ product teams} to deploy modules independently and reducing release coordination from days to hours.
+  \item Built the host shell with \textbf{Redux Toolkit and RTK Query}; defined shared-dependency, routing and versioning contracts so independently shipped modules worked together.
+  \item{Led cross-country projects as the de facto architect, coaching \textbf{10+ engineering teams} on coding standards and embedding automated checks into \textbf{code review} and CI, while \textbf{contributing to architecture discussions} and translating requirements into technical specs.}
+    
+  \item Led accessibility work across React components and the internal design system, lifting \textbf{WCAG compliance scores by 40\%}; coached \textbf{10+ teams} on semantic markup, focus management and ARIA.
+  \item Implemented circuit breaker and retry patterns across \textbf{5+ microservices}, which reduced cascading failures during downstream outages and improved overall system availability by \textbf{15\%}.
+  \item Improved UI load performance by \textbf{30\%} through \textbf{Akamai CDN} migration and bundle-delivery optimisation; instrumented client-side traces and core web vitals with Grafana and OpenTelemetry.
+  \item Translated product requirements into technical specifications, Figma prototypes and release-ready features while collaborating across frontend, backend and UX responsibilities.
+  \item Developed \textbf{Spring APIs} and flexible \textbf{PostgreSQL JSONB} forms behind the frontend, giving business teams new form fields without database migrations.
+\end{resumeBullets}
+
+\resumeRole{Mastercard}{Mar 2022 -- Feb 2024}{Software Engineer II}{Vadodara, India}
+\resumeContext{Worked on Mastercard's franchise and legal solution, building React and TypeScript applications alongside Spring services.}
+\begin{resumeBullets}
+    \item Developed backend APIs with \textbf{Spring, Spring Data JPA, and Hibernate}, applying API Gateway and event-sourcing patterns using \textbf{Kafka} for asynchronous, auditable flows.
+  \item Built greenfield \textbf{React and TypeScript} applications with Redux and RTK Query, alongside Spring and Oracle services.
+  \item Migrated application routing from \textbf{React Router v5 to v6}, updating route definitions and navigation behaviour across the frontend.
+  \item Used \textbf{Fetch and AbortController} to cancel search requests when a new search superseded them or a component unmounted.
+  \item Moved non-DOM work, including observability/APM and date-library processing, into \textbf{Web Workers} to keep the main thread available for UI interaction.
+  \item Built a widget using the \textbf{CustomEvent API} to pass messages between the application and an external Drupal site.
+  \item Wrote Jest and React Testing Library unit tests and Playwright/Cypress end-to-end tests, achieving \textbf{95\% test coverage}; split and parallelised the CI suite, cutting runtime from \textbf{eight hours to three}.
+  \item Designed high-fidelity \textbf{Figma} prototypes for product managers in \textbf{two days} when no UX designer was available.
+\end{resumeBullets}
+
+\resumeRole{Mastercard}{Jul 2019 -- Feb 2022}{Software Engineer I}{Vadodara, India}
+
+\resumeContext{Worked on Workflow as a Service, building enterprise workflows and the APIs behind them.}
+\begin{resumeBullets}
+  \item Built \textbf{REST APIs} for Camunda workflow automation and delivered an \textbf{Angular.js} application through Grunt and Jenkins.
+  \item Developed an HSM integration for MDES tokenisation and remediated security findings from penetration tests.
+\end{resumeBullets}
+
+
+
+
+
+\resumeRole{Nebius Academy}{Mar 2026 -- May 2026}{AI Engineering Fellow}{London, UK}
+\resumeContext{The UK programme covers \textbf{five modules}: AI agents, LLM architectures, MLOps, performance engineering and LLM post-training. Completed hands-on work across the first four modules, learning how to evaluate, deploy and monitor AI systems.}
+\begin{resumeBullets}
+  \item Built a \textbf{Python} research agent that checks figures in its answers against tool results, and a booking flow that applies business rules before confirming a request.
+  \item Built a small language model and improved its response time with \textbf{KV caching}; packaged training jobs for repeatable cloud runs.
+\end{resumeBullets}
+
+
+
+\section{Projects}
+\resumeProject{Web Accessibility Repair Platform}{https://github.com/aymanapatel/rl-a11y}{React, FastAPI, Playwright, axe-core}
+Architected an end-to-end web-accessibility platform using LLM-guided Browser Use and Playwright to navigate public and authenticated pages and collect aligned HTML, axe-core, accessibility-tree, visual and screenshot data for 704 webpages; trained routed GAT/GraphSAGE specialists and generated schema-constrained repairs through FastAPI/React, improving page-level F1 by 34.1 points and rule-level F1 by 30.6 points over the initial architecture.\par\vspace{2pt}
+
+\resumeProject{Java GraphQL Services}{https://github.com/aymanapatel/graphql-app}{Java, GraphQL}Production-oriented Spring Boot GraphQL service with query-depth DDOS protection, cursor-based pagination, DataLoader N+1 resolution, file upload mutations, and JUnit 5 integration tests for schema validation
+
+\resumeProject{Nebius Project}{https://github.com/aymanapatel/nebius-project}{Python, FastAPI, LLMs, Tree-sitter}
+Built a Repository Summarizer service using FastAPI and LLMs that generates human-readable summaries of GitHub repositories. Extracts code skeletons via AST and Tree-sitter to fit within token budgets, intelligently prioritizes source files, and assembles context within a 7000-token limit. This project secured admission into the Nebius AI Engineering Fellowship.\par\vspace{2pt}
+
+\resumeProject{Go Microservices}{https://github.com/aymanapatel/golang-microservices}{Go, REST, Envoy, gRPC}
+Built a progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom request validation, Swagger/OpenAPI documentation, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC.\par\vspace{2pt}
+
+
+\section{Hackathons}
+\resumeHackathon{\{Tech: Europe\} Hackathon -- London, UK}{Jun 2026}{Most Secure Build Award (EUR 1,000 cash)}
+Built a platform bridging deep science and venture capital/biotech by turning raw academic papers into investor-ready intelligence. It used an AI research agent expands the query into scientific keywords, searches publications via Tavily, and returns an instant scorecard with drug target, disease, mechanism, and Commercial Viability score. Recognized by Aikido Security for the most secure codebase with zero issues detected, despite last-minute demo crunch in an npm ecosystem. Partners: Attio, Tavily, Google DeepMind.\par\vspace{2pt}
+
+\resumeHackathon{Encode Hackathon -- London, UK}{2025}{3rd place}
+Built Phantom Fraud, an AI-powered financial risk engine for the Solana blockchain. Used Solana CLI, OpenRouter, and Helius APIs to fetch and parse on-chain transactions and detect wash-trading patterns.\par\vspace{2pt}
+
+\resumeHackathon{AI Hackathon -- Vadodara, India}{Mar 2025}{3rd place}
+Built a dynamic UI builder that used a \textbf{vision model} to interpret UX designs and generate \textbf{React} interfaces, backed by \textbf{PGlite} as an in-browser PostgreSQL store.\par\vspace{2pt}
+\resumeHackathon{AI Hackathon -- Vadodara, India}{Sep 2024}{2nd place}
+Developed a RAG-based internal documentation search system using LangChain and Chroma vector database. Chunked internal docs, embedded them, and exposed a Q\&A interface that retrieved grounded answers with source references.\par\vspace{2pt}
+
+\resumeHackathon{Technology Hackathon -- Vadodara, India}{2023}{2nd place}
+Migrated a React application to Next.js, improving page load performance and enabling server-side rendering and static generation for key routes.
+
+\section{Technical Skills}
+\textbf{Frontend:} React, TypeScript, JavaScript, HTML, Redux Toolkit, RTK Query, Next.js, Vite, Webpack, Module Federation, Figma\\
+\textbf{Browser APIs:} Fetch, AbortController, Web Workers, CustomEvent\\
+\textbf{Backend and data:} Python, GraphQL, REST APIs, FastAPI, Spring, PostgreSQL, Redis, Kafka\\
+\textbf{Testing and quality:} Jest, React Testing Library, Playwright, Cypress, axe-core, WCAG\\
+\textbf{Observability:} Grafana, OpenTelemetry, Dynatrace, Splunk
+
+\section{Writing}
+\textbf{Patel of Thought blog:} \href{https://patelofthought.com/blog}{patelofthought.com/blog} -- 40+ published articles, including frontend engineering and system design.\\
+\textbf{Frontend engineering whitepapers:} Accessibility and microfrontend architecture; recognised by the Mastercard CTO, circulated to 200 engineers and adopted as internal references.
+
+\end{document}

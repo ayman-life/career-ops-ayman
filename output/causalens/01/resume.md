@@ -83,7 +83,7 @@ January 2019 - June 2019
 ## Selected Projects
 
 - **Credit Card Fraud Analytics ([Report](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-report.pdf), [Notebook](https://github.com/aymanapatel/qmul-all-projects/blob/main/data-analytics/coursework1/credit-card-notebook.ipynb)):** Built fraud-detection analysis on the IEEE-CIS dataset, merging 590,540 transactions across 434 transaction and identity features. Tuned Random Forest models with SMOTE variants and threshold optimization; best model achieved 96.9% test accuracy and 0.879 ROC-AUC on a chronological test split.
-- **[Java GraphQL Service](https://github.com/aymanapatel/java-graphql):** Built a production-oriented Spring Boot GraphQL service with query-depth DDOS protection, cursor pagination, DataLoader N+1 resolution, file uploads, execution tracing, and JUnit 5 integration tests.
+- **[Java GraphQL Service](https://github.com/aymanapatel/graphql-app):** Built a production-oriented Spring Boot GraphQL service with query-depth DDOS protection, cursor pagination, DataLoader N+1 resolution, file uploads, execution tracing, and JUnit 5 integration tests.
 - **[Go Microservices](https://github.com/aymanapatel/golang-microservices):** Built a progressive Go microservices project covering REST APIs, Gorilla Mux validation, Swagger/OpenAPI docs, Envoy service mesh/load balancing, Kubernetes/WASM filters, and gRPC.
 - **[RL Accessibility](https://github.com/aymanapatel/rl-a11y):** Applied reinforcement learning to improve web accessibility by training agents to identify and fix WCAG violations automatically.
 

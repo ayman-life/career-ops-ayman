@@ -66,7 +66,7 @@ January 2019 – June 2019
 
 ## Selected Projects
 
-- **[Java GraphQL](https://github.com/aymanapatel/java-graphql)** — Production-oriented Spring Boot GraphQL service with query-depth DDOS protection, cursor-based pagination, DataLoader N+1 resolution, file upload mutations, and full JUnit 5 integration tests.
+- **[Java GraphQL](https://github.com/aymanapatel/graphql-app)** — Production-oriented Spring Boot GraphQL service with query-depth DDOS protection, cursor-based pagination, DataLoader N+1 resolution, file upload mutations, and full JUnit 5 integration tests.
 - **[Go Microservices](https://github.com/aymanapatel/golang-microservices)** — Progressive Go microservices project spanning standard-library REST APIs, Gorilla Mux with custom validation, Swagger/OpenAPI docs, Envoy-based service mesh/load balancing with K8s/WASM filters, and gRPC.
 - **[Java CLI using GraalVM](https://github.com/aymanapatel/java-cli)** — Java CLI tool using Picocli to query the Stack Overflow API, compiled to a native binary with GraalVM for zero-JVM-startup execution.
 
