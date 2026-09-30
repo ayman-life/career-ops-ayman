@@ -79,28 +79,40 @@
 # Example below targets US-based remote + a couple of US metros, blocking
 # common foreign hubs. Customize to your geography.
 
-# location_filter:
-#   # always_allow is checked BEFORE block — keep this list to your home region only
-#   always_allow:
-#     - "United States"   # also admits City, ST homonyms (Dublin, OH) via USPS states
-#     - "New York"
-#   allow:
-#     - "Remote"
-#     - "United States"
-#     - "USA"
-#     - "Atlanta"
-#     - "New York"
-#   block:
-#     - "India"
-#     - "Bengaluru"
-#     - "United Kingdom"
-#     - "London"
-#     - "Germany"
-#     - "France"
-#     - "Singapore"
-#     - "Japan"
-#     - "Brazil"
-#     - "Australia"
+location_filter:
+  # always_allow is checked BEFORE block — keep this list to your home region only
+  always_allow:
+    - "Remote"
+    - "United Kingdom"
+    - "UK"
+    - "Manchester"
+    - "London"
+    - "Glasgow"
+    - "Edinburgh"
+  allow:
+    - "Remote"
+    - "United Kingdom"
+    - "UK"
+    - "Manchester"
+    - "London"
+    - "Glasgow"
+    - "Edinburgh"
+    - "Bristol"
+    - "Birmingham"
+    - "Milton Keynes"
+    - "Oxford"
+    - "Luton"
+    - "Cambridge"
+    - "St Albans"
+  block:
+    - "India"
+    - "Bengaluru"
+    - "Germany"
+    - "France"
+    - "Singapore"
+    - "Japan"
+    - "Brazil"
+    - "Australia"
 
 # -- Country-eligibility filter (optional, opt-in, #2093) --
 # location_filter only reads the ATS provider's STRUCTURED location field
@@ -374,6 +386,15 @@ title_filter:
     - "Dozent"
     - "Weiterbildung"
     # -- Engineering roles --
+    - "Full Stack"
+    - "Full-Stack"
+    - "Fullstack"
+    - "Frontend"
+    - "Front-End"
+    - "Backend"
+    - "Back-End"
+    - "Software Engineer"
+    - "Product Engineer"
     - "Platform Engineer"
     - "Solutions Architect"
     - "Solutions Engineer"
@@ -659,7 +680,7 @@ search_queries:
   # "Spain OR Madrid OR Barcelona" for France, or swap the title terms for
   # your own profession) if you want its wider listings.
   - name: Welcome to the Jungle
-    query: 'site:welcometothejungle.com United Kingdom OR London OR Manchester "AI Engineer" OR "Frontend Engineer" OR "Backend Engineer" OR "Full-stack engineer" OR "React" OR "Java" OR "Forward Deployed"'
+    query: 'site:welcometothejungle.com United Kingdom OR London OR Manchester OR Glasgow OR Edinburgh "AI Engineer" OR "Frontend Engineer" OR "Backend Engineer" OR "Full-stack engineer" OR "React" OR "Java" OR "Forward Deployed"'
     enabled: true
 
   # -- DevRel-specific boards (AI/DevTools example) --

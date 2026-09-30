@@ -70,9 +70,9 @@ narrative:
 
 
 compensation:
-  target_range: "£55K-120K"     # Your target total comp
+  target_range: "£55K-140K"     # Your target total comp
   currency: "GBP"
-  minimum: "£55K"               # Walk-away number
+  minimum: "£50K"               # Walk-away number
   location_flexibility: "London. Hybrid but open to full-time office"
 
 location:
